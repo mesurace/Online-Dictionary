@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.onlinedictionary.controller;
 
 import com.onlinedictionary.service.SearchService;
@@ -22,13 +17,15 @@ public class DictServlet extends HttpServlet {
 
     SearchService searchService = new SearchServiceImp();
 
+     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
         PrintWriter out = response.getWriter();
-        out.print("test");
+        out.print("Online Dictionary");
 
     }
 
+    @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
