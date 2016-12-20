@@ -27,6 +27,16 @@ h1{
 
 #content{
     margin: auto;
-    background-color: #fbf9f9;
+}
+
+#w3c{
+
+    bottom: 0;
+    right: 0;
+    position: fixed;
+
+}
+li{
+    margin-top: 20px;
 }
 
