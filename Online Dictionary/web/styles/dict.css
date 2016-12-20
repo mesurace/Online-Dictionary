@@ -5,16 +5,28 @@
 h1{
     margin: auto;
     height: 60px;   
-    color: #3E0404;
-    background-color: #F7F0F0;
+    background-color: #cfcccc;
     font-size: 30pt;
 }
 
 #inputpart{
-    background-color: #cccccc;
+    margin: auto;
+    background-color: #e9e6e6;
+    line-height: 90px;
 }
 
-#result{
-    background-color: #dcd8d8;
+#inputpart label{
+    line-height: 100%;
+    vertical-align: middle;
+}
+
+#inputpart button{
+    line-height: 100%;
+    vertical-align: middle;
+}
+
+#content{
+    margin: auto;
+    background-color: #fbf9f9;
 }
 
