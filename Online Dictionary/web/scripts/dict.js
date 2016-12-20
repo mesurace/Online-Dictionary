@@ -13,8 +13,9 @@ var getresult = (function () {
             }
         })
                 .done(function (data) {
-
-                    $.each(data, function (i, item) {
+                   
+                   $("#content").empty();
+                    $.each(data, function (i,item) {
                         var li = $("<li><a></a></li>");
                         $("#content").append(li);
                         $(li).text("("+item.wordtype+") :: "+item.definition);
