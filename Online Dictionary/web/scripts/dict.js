@@ -13,12 +13,17 @@ var getresult = (function () {
             }
         })
                 .done(function (data) {
-                   
-                   $("#content").empty();
-                    $.each(data, function (i,item) {
+
+                    $("#content").empty();
+                    $.each(data, function (i, item) {
                         var li = $("<li><a></a></li>");
                         $("#content").append(li);
-                        $(li).text("("+item.wordtype+") :: "+item.definition);
+                        if (item.wordtype === "") {
+                            $(li).text(item.definition);
+
+                        } else {
+                            $(li).text("(" + item.wordtype + ") :: " + item.definition);
+                        }
                     });
 
                 })
@@ -26,7 +31,7 @@ var getresult = (function () {
                     alert(errMsg);
                 });
     };
-    
+
     return {
         result: function () {
             callajax();
