@@ -46,6 +46,35 @@ public class SearchServiceImp implements SearchService {
         return result;
     }
 
+    @Override
+    public String autoSearch(String s) {
+        Connection conn = DbConnection.getConnection();
+
+        PreparedStatement stmt = null;
+
+        ResultSet rs = null;
+
+        String result = null;
+
+        String query = "SELECT word from entries where word like ? limit 50;";
+
+        try {
+
+            stmt = conn.prepareStatement(query);
+            stmt.setString(1,  s + "%");
+            rs = stmt.executeQuery();
+
+            result = convertToJSON(rs).toString();
+
+        } catch (JSONException e) {
+        } catch (SQLException ex) {
+            Logger.getLogger(SearchServiceImp.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            DbConnection.closeConnection(conn);
+        }
+        return result;
+    }
+
     private JSONArray convertToJSON(ResultSet resultSet) throws SQLException, JSONException {
         JSONArray jsonArray = new JSONArray();
 

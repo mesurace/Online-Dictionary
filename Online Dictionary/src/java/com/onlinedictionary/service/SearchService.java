@@ -6,4 +6,5 @@ package com.onlinedictionary.service;
  */
 public interface SearchService {
     public String search(String s);
+    public String autoSearch(String s);
 }

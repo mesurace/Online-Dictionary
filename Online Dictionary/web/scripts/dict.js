@@ -41,4 +41,26 @@ var getresult = (function () {
 
 $(document).ready(function () {
     $("#btnsearch").click(getresult.result);
+    $("#search").keyup(function () {
+       
+        $.ajax({
+            type: "POST",
+            dataType: 'json',
+            url: "http://localhost:8080/Online%20Dictionary/AutoSearch",
+            data: {
+                "searchkey": $("#search").val()
+            },
+            success: function (data) {
+                var availableTags = [];
+                $.each(data, function (i, item) {
+                   availableTags.push(item.word);
+                });
+                $("#search").autocomplete({
+                    source: availableTags
+                });
+               
+            }
+        });
+    });
+    
 });

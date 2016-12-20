@@ -4,6 +4,10 @@
         <servlet-name>dictServlet</servlet-name>
         <servlet-class>com.onlinedictionary.controller.DictServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AutoSearch</servlet-name>
+        <servlet-class>com.onlinedictionary.controller.AutoSearch</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>dictServlet</servlet-name>
         <url-pattern>/DictServlet</url-pattern>
@@ -11,6 +15,10 @@
     <welcome-file-list>
         <welcome-file>dict.html</welcome-file>
     </welcome-file-list>
+    <servlet-mapping>
+        <servlet-name>AutoSearch</servlet-name>
+        <url-pattern>/AutoSearch</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
