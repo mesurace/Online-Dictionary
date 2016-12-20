@@ -56,7 +56,7 @@ public class SearchServiceImp implements SearchService {
 
         String result = null;
 
-        String query = "SELECT word from entries where word like ? limit 50;";
+        String query = "SELECT distinct word from entries where word like ? limit 15;";
 
         try {
 
