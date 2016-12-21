@@ -23,9 +23,5 @@ It uses all of the following technologies:
     • JSON
     • NetBeans IDE
 
-Note: To run this projcet it needs to add two jars mysql jdbc and json. And also needs to import englishdictionary.sql to the mysql database.
+Note: To run this projcet it needs to import englishdictionary.sql to the database.
 
-DOWNLOADS :
-
-      Dictionary : http://mumstudents.org/cs472/2016-12-BL/Labs/englishdictionary.sql
-      Json       : http://www.java2s.com/Code/JarDownload/java-json/java-json.jar.zip
