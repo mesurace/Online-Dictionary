@@ -13,36 +13,36 @@ var getresult = (function () {
             }
         })
                 .done(function (data) {
-
                     $("#content").empty();
-                    $.each(data, function (i, item) {
-                        var li = $("<li><a></a></li>");
-                        $("#content").append(li);
-                        if (item.wordtype === "") {
-                            $(li).text(item.definition);
+                    $("#content").removeClass("redtext");
+                    if (data.length) {
+                        $("#text").html($("#search").val().toUpperCase());
+                        $.each(data, function (i, item) {
+                            if (item.wordtype === "") {
+                                $("#content").append($("<li> " + item.definition + "</li>"));
 
-                        } else {
-                            $(li).text("(" + item.wordtype + ") :: " + item.definition);
-                        }
-                    });
+                            } else {
+                                $("#content").append($("<li><span>(" + item.wordtype + ")</span> :: " + item.definition + "</li>"));
+                            }
+                        });
+                    } else {
+                        $("#text").empty();
+                        $("#content").html("<p>No result found</p>").addClass("redtext");
+                        ;
+
+                    }
 
                 })
                 .fail(function (errMsg) {
                     alert(errMsg);
-                });
+                }).always(function () {
+            $("#loader").hide();
+        });
+        $("#loader").show();
+        ;
     };
 
-    return {
-        result: function () {
-            callajax();
-        }
-    };
-})();
-
-$(document).ready(function () {
-    $("#btnsearch").click(getresult.result);
-    $("#search").keyup(function () {
-       
+    var callautosearch = function () {
         $.ajax({
             type: "POST",
             dataType: 'json',
@@ -53,14 +53,51 @@ $(document).ready(function () {
             success: function (data) {
                 var availableTags = [];
                 $.each(data, function (i, item) {
-                   availableTags.push(item.word);
+                    availableTags.push(item.word);
                 });
                 $("#search").autocomplete({
-                    source: availableTags
+                    autoFocus: true,
+                    source: availableTags,
+                    select: function (event, ui) {
+                        callajax();
+                        return false;
+                    }
+
                 });
-               
+
             }
         });
-    });
-    
+    };
+
+    return {
+        result: function () {
+            $("#text").empty();
+            if ($("#search").val().length === 0) {
+                $("#content").empty();
+                $("#content").html("Please enter a text to search!!!")
+                $("#content").addClass("redtext");
+            } else {
+
+               
+                callajax();
+            }
+        },
+        autosearch: function () {
+            callautosearch();
+        },
+        enterpress: function (e) {
+            var key = e.which;
+            if (key === 13)
+            {
+                e.preventDefault();
+                getresult.result();
+            }
+        }
+    };
+})();
+
+$(document).ready(function () {
+    $("#btnsearch").click(getresult.result);
+    $("#search").keyup(getresult.autosearch);
+    $('#search').keypress(getresult.enterpress);
 });

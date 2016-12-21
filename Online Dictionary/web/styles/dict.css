@@ -2,40 +2,50 @@
     Created on : Dec 19, 2016, 1:51:53 PM
     Author     : sureshadhikari
 */
+body{
+    margin: auto;
+    font-family: "Times New Roman", Georgia, Serif;
+}
 h1{
     margin: auto;
-    height: 60px;   
+    height: 50px;   
     background-color: #cfcccc;
-    font-size: 30pt;
+    text-align: center;
+    padding: 10px;
 }
 
 #inputpart{
-    margin: auto;
+    text-align: center;
     background-color: #e9e6e6;
-    line-height: 90px;
+    padding: 10px;
+    margin: 0px;
+}
+#search{
+    font-size: 20px;
+}
+#btnsearch{
+    font-size: 20px;
 }
 
 #inputpart label{
-    line-height: 100%;
-    vertical-align: middle;
+    font-size: 20px;
 }
-
-#inputpart button{
-    line-height: 100%;
-    vertical-align: middle;
-}
-
 #content{
     margin: auto;
 }
 
-#w3c{
-
-    bottom: 0;
-    right: 0;
-    position: fixed;
-
-}
 li{
     margin-top: 20px;
+}
+span{
+    font-weight: bold;
+}
+.redtext{
+    color: red;
+}
+#text{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 12px;
+    margin-right: 12px;
 }
