@@ -11,7 +11,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- *
  * @author sureshadhikari
  */
 public class SearchServiceImp implements SearchService {
@@ -21,9 +20,9 @@ public class SearchServiceImp implements SearchService {
 
         Connection conn = DbConnection.getConnection();
 
-        PreparedStatement stmt = null;
+        PreparedStatement stmt;
 
-        ResultSet rs = null;
+        ResultSet rs;
 
         String result = null;
 
@@ -50,9 +49,9 @@ public class SearchServiceImp implements SearchService {
     public String autoSearch(String s) {
         Connection conn = DbConnection.getConnection();
 
-        PreparedStatement stmt = null;
+        PreparedStatement stmt;
 
-        ResultSet rs = null;
+        ResultSet rs;
 
         String result = null;
 

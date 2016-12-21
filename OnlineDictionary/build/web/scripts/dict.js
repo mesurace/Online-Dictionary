@@ -39,7 +39,6 @@ var getresult = (function () {
             $("#loader").hide();
         });
         $("#loader").show();
-        ;
     };
 
     var callautosearch = function () {
@@ -74,11 +73,9 @@ var getresult = (function () {
             $("#text").empty();
             if ($("#search").val().length === 0) {
                 $("#content").empty();
-                $("#content").html("Please enter a text to search!!!")
+                $("#content").html("Please enter a text to search!!!");
                 $("#content").addClass("redtext");
             } else {
-
-               
                 callajax();
             }
         },

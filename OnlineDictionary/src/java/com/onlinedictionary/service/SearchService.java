@@ -1,7 +1,6 @@
 package com.onlinedictionary.service;
 
 /**
- *
  * @author sureshadhikari
  */
 public interface SearchService {
