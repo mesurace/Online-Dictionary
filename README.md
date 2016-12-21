@@ -21,4 +21,7 @@ It uses all of the following technologies:
     • AJAX
     • SQL
     • JSON
+    • NetBeans IDE
 
+Note: To run this projcet it needs to add two jars mysql jdbc and json .
+      Json link: http://www.java2s.com/Code/JarDownload/java-json/java-json.jar.zip
