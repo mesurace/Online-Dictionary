@@ -1,0 +1,51 @@
+/* 
+    Created on : Dec 19, 2016, 1:51:53 PM
+    Author     : sureshadhikari
+*/
+body{
+    margin: auto;
+    font-family: "Times New Roman", Georgia, Serif;
+}
+h1{
+    margin: auto;
+    height: 50px;   
+    background-color: #cfcccc;
+    text-align: center;
+    padding: 10px;
+}
+
+#inputpart{
+    text-align: center;
+    background-color: #e9e6e6;
+    padding: 10px;
+    margin: 0px;
+}
+#search{
+    font-size: 20px;
+}
+#btnsearch{
+    font-size: 20px;
+}
+
+#inputpart label{
+    font-size: 20px;
+}
+#content{
+    margin: auto;
+}
+
+li{
+    margin-top: 20px;
+}
+span{
+    font-weight: bold;
+}
+.redtext{
+    color: red;
+}
+#text{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
