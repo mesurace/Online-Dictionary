@@ -23,5 +23,6 @@ It uses all of the following technologies:
     • JSON
     • NetBeans IDE
 
-Note: To run this projcet it needs to import englishdictionary.sql to the database.
+Note: To run this projcet it needs to import englishdictionary.sql to the database.The file englishdictionary.sql contains a full English Dictionary, and can be downloaded from the following link.            
 
+       http://mumstudents.org/cs472/2016-12-BL/Labs/englishdictionary.sql
