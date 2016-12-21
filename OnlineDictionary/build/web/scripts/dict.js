@@ -5,7 +5,7 @@
 var getresult = (function () {
 
     var callajax = function () {
-        $.ajax("http://localhost:8080/Online%20Dictionary/DictServlet", {
+        $.ajax("http://localhost:8080/OnlineDictionary/DictServlet", {
             "type": "post",
             dataType: 'json',
             "data": {
@@ -46,7 +46,7 @@ var getresult = (function () {
         $.ajax({
             type: "POST",
             dataType: 'json',
-            url: "http://localhost:8080/Online%20Dictionary/AutoSearch",
+            url: "http://localhost:8080/OnlineDictionary/AutoSearch",
             data: {
                 "searchkey": $("#search").val()
             },

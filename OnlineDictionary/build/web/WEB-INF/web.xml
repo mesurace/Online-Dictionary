@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>dictServlet</servlet-name>
+        <servlet-name>DictServlet</servlet-name>
         <servlet-class>com.onlinedictionary.controller.DictServlet</servlet-class>
     </servlet>
     <servlet>
@@ -9,16 +9,18 @@
         <servlet-class>com.onlinedictionary.controller.AutoSearch</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>dictServlet</servlet-name>
+        <servlet-name>DictServlet</servlet-name>
         <url-pattern>/DictServlet</url-pattern>
     </servlet-mapping>
-    <welcome-file-list>
-        <welcome-file>dict.html</welcome-file>
-    </welcome-file-list>
     <servlet-mapping>
         <servlet-name>AutoSearch</servlet-name>
         <url-pattern>/AutoSearch</url-pattern>
+        
     </servlet-mapping>
+    
+     <welcome-file-list>
+        <welcome-file>dict.html</welcome-file>
+    </welcome-file-list>
     <session-config>
         <session-timeout>
             30
