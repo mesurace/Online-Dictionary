@@ -12,13 +12,13 @@ TECHNOLOGIES :
 
 It uses all of the following technologies: 
 
-    Servlet
-    HTML
-    CSS 
-    JavaScript
-    Module Pattern, 
-    jQuery
-    AJAX
-    SQL
-    JSON
+    • Servlet
+    • HTML
+    • CSS 
+    • JavaScript
+    • Module Pattern, 
+    • jQuery
+    • AJAX
+    • SQL
+    • JSON
 
